@@ -9,3 +9,4 @@ features:
 siblings:
   - ergonaut_one_left
   - ergonaut_one_right
+  - ergonaut_one_dongle
