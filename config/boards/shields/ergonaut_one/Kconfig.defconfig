@@ -4,7 +4,7 @@
 if SHIELD_ERGONAUT_ONE_DONGLE
 
 config ZMK_KEYBOARD_NAME
-	default "Ergonaut One"
+	default "Ergonaut One Dongle"
 
 config ZMK_SPLIT_ROLE_CENTRAL
 	default y
