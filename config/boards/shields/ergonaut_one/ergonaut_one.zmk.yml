@@ -3,7 +3,7 @@ id: ergonaut_one
 name: Ergonaut One
 type: shield
 url: https://github.com/ergonautkb/one
-requires: [seeeduino_xiao_ble]
+requires: [seeeduino_xiao_ble, nice_nano_v2]
 features:
   - keys
 siblings:
