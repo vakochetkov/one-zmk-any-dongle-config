@@ -1,17 +1,16 @@
-/*
- * Copyright (c) 2020 The ZMK Contributors
- *
- * SPDX-License-Identifier: MIT
- */
-
 #include <dt-bindings/zmk/matrix_transform.h>
 
 / {
     chosen {
-        zmk,kscan = &kscan0;
-        zmk,matrix_transform = &default_transform;
-        /* /delete-property/ zephyr,console; */
-        /* /delete-property/ zephyr,shell-uart; */
+        zmk,kscan = &mock_kscan;
+        zmk,physical-layout = &physical_layout0;
+    };
+
+    mock_kscan: mock_kscan_0 {
+        compatible = "zmk,kscan-mock";
+        columns = <0>;
+        rows = <0>;
+        events = <0>;
     };
 
     default_transform: keymap_transform_0 {
@@ -32,31 +31,9 @@
             >;
     };
 
-	kscan0: kscan_0 {
-		compatible = "zmk,kscan-gpio-matrix";
-		label = "KSCAN";
-		wakeup-source;
-
-		diode-direction = "col2row";
-		row-gpios
-			= <&xiao_d 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-			, <&xiao_d  9 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-			, <&xiao_d  8 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-			, <&xiao_d  7 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-			;
-	};
-};
-
-&xiao_spi { status = "disabled"; };
-&xiao_i2c { status = "disabled"; };
-&xiao_serial { status = "disabled"; };
-
-&gpio0 {
-    fastbatcharge: fast-battery-charge {
-        gpio-hog;
-        gpios = <13 GPIO_ACTIVE_HIGH>;
-        output-low;
-        line-name = "Fast Battery Charge";
+    physical_layout0: physical_layout_0 {
+        compatible = "zmk,physical-layout";
+        display-name = "Default Layout for Dongle";
+        transform = <&default_transform>;
     };
 };
-

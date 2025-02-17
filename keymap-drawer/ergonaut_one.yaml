@@ -110,7 +110,7 @@ layers:
   - →
   - Insert
   - {t: APP, h: Ctrl}
-  - Alt
+  - {t: Gui, h: Alt}
   - KP 0
   - KP 1
   - KP 2
@@ -133,10 +133,10 @@ layers:
   - ''
   - ''
   - ''
-  - ''
-  - ''
-  - ''
-  - ''
+  - Out USB
+  - Out BLE
+  - Out BLE
+  - Out USB
   - ''
   - ''
   - ''

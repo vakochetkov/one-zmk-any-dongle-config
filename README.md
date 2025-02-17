@@ -1,6 +1,18 @@
 # ZMK Firmware for Ergonaut One keyboard
 
-This is a repository for a ZMK Firmware for Ergonaut One keyboard.
+This repository is a **fork** of the ZMK firmware for the Ergonaut One keyboard with **dongle support**.
+
+## Why This Fork Exists
+
+This fork introduces key features that differentiate it from the existing [one-zmk-config](https://github.com/ergonautkb/one-zmk-config) and [one-dongle-zmk-config](https://github.com/ergonautkb/one-dongle-zmk-config) repositories:
+
+* Use a **nice!nano v2** compatible board as a dongle due to its convenient form-factor and low price e.g. check out [this clone](https://github.com/joric/nrfmicro/wiki/Alternatives#supermini-nrf52840)
+* Support peripherals **battery level reporting** in BLE mode, also check [this great script](https://gist.github.com/rottencandy/901189a3cfac94bcbdefdf40236b042e)
+* **Simultaneously** support USB mode and the original 5 BT profiles, allowing both stationary (USB) and portable (BLE) usage with a dongle
+* Add a keymap option for `BLE` and `USB` dongle modes on `adjust` layer
+* Remap the `Gui` button to the left `Alt` key in the `raise` layer, as it's frequently used in window managers
+
+> Note. Using the dongle in BT mode will add another 5ms to the overall keyboard latency. For more details on latency in different use cases, see the [SliceMK ZMK Wireless FAQ](https://docs.slicemk.com/firmware/zmk/wireless/faq/#what-is-the-keyboard-latency).
 
 ## Default keymap
 
